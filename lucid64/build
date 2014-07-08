@@ -20,6 +20,8 @@ packages="
   build-essential
   curl
   dnsutils
+  ffmpeg
+  ffprobe
   flex
   gdb
   git
@@ -52,6 +54,7 @@ packages="
   sysstat
   tcpdump
   traceroute
+  unoconv
   unzip
   wget
   zip
