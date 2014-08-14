@@ -20,8 +20,6 @@ packages="
   build-essential
   curl
   dnsutils
-  ffmpeg
-  ffprobe
   flex
   gdb
   git
@@ -142,6 +140,15 @@ run_in_chroot $rootfs_dir "
   echo 'xvfb-run --server-args="-screen 0, 1024x768x24" /usr/bin/wkhtmltopdf $*' > /usr/bin/wkhtmltopdf.sh
   chmod a+x /usr/bin/wkhtmltopdf.sh
   ln -s /usr/bin/wkhtmltopdf.sh /usr/local/bin/wkhtmltopdf
+"
+# install ffmeg and ffprobe
+run_in_chroot $rootfs_dir "
+  set -e
+  cd /tmp
+  wget http://ffmpeg.gusari.org/static/64bit/ffmpeg.static.64bit.latest.tar.gz
+  tar -zxvf ffmpeg.static.64bit.latest.tar.gz
+  mv ffmpeg /usr/bin/ffmpeg
+  mv ffprobe /usr/bin/ffprobe
 "
 
 # cleanup artifacts in /tmp
