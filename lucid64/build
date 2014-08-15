@@ -35,7 +35,7 @@ packages="
   libncurses5-dev
   libpq-dev
   libreadline6-dev
-  libreoffice-core
+  libreoffice
   libsqlite-dev
   libsqlite3-dev
   libssl-dev

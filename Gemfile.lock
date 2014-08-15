@@ -28,7 +28,7 @@ GEM
     librarian (0.1.1)
       highline
       thor (~> 0.15)
-    librarian-chef (0.0.2)
+    librarian-chef (0.0.4)
       archive-tar-minitar (>= 0.5.2)
       chef (>= 0.10)
       librarian (~> 0.1.0)
@@ -64,5 +64,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  archive-tar-minitar
   aws-s3
-  librarian-chef
+  librarian-chef (>= 0.0.4)
