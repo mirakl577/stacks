@@ -1,4 +1,5 @@
 source "https://rubygems.org"
 
-gem "librarian-chef"
+gem "archive-tar-minitar"
+gem "librarian-chef", ">=0.0.4"
 gem "aws-s3"

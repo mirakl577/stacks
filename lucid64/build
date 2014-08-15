@@ -137,7 +137,7 @@ run_in_chroot $rootfs_dir "
   wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.9.9-static-amd64.tar.bz2
   tar jxf wkhtmltopdf-0.9.9-static-amd64.tar.bz2
   mv wkhtmltopdf-amd64 /usr/bin/wkhtmltopdf
-  echo 'xvfb-run --server-args="-screen 0, 1024x768x24" /usr/bin/wkhtmltopdf $*' > /usr/bin/wkhtmltopdf.sh
+  echo \"xvfb-run --server-args='-screen 0, 1024x768x24' /usr/bin/wkhtmltopdf $*\" > /usr/bin/wkhtmltopdf.sh
   chmod a+x /usr/bin/wkhtmltopdf.sh
   ln -s /usr/bin/wkhtmltopdf.sh /usr/local/bin/wkhtmltopdf
 "
